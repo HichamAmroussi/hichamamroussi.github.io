@@ -1,0 +1,285 @@
+/** Roboto Font **/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 97%;
+  }
+}
+
+@media (max-width: 980px) {
+  html {
+    font-size: 95%;
+  }
+}
+
+@media (max-width: 460px) {
+  html {
+    font-size: 92%;
+  }
+}
+
+/** Base styles **/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h1, h2 {
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/** Navigation Bar **/
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #BD857C;
+  box-shadow: 0 4px 7px rgba( 62, 62, 62, 0.2);
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  #navbar {
+    justify-content: center;
+  }
+}
+
+#navbar ul a{
+  margin-right: 9vw;
+  font-size: 1.55rem;
+  color: white;
+}
+
+#navbar ul a:hover{
+  color: #FFE9C4;
+  transition: color 0.8s;
+}
+
+/** Section 1 **/
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to right top, #fff2dc, #eedec3, #decbab, #cdb893, #bda57c);
+}
+
+#welcome-section h1 {
+  height: 78px;
+}
+
+@media (max-width: 614px) {
+  #welcome-section h1 {
+  height: auto;
+}
+}
+
+#welcome-section p {
+  font-size: 1.8rem;
+}
+
+#code {
+  color: #0477c5;
+  font-size: 2.3rem;
+  margin-left: 20px;
+}
+
+@media (max-width: 614px) {
+  #welcome-section p {
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+  #code {
+  font-size: 1.8rem;
+  margin-left: 15px;
+}
+}
+
+/** Section 2 **/
+
+#projects {
+  background: #f1f1f1;
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.title {
+  background: #eedec3;
+  width: 34rem;
+  margin: auto;
+  border-radius: 8px;
+}
+
+#projects h2 {
+  color: #9F7069;
+  margin-bottom: 80px;
+  background: #eedec3;
+  padding: 5px 0;
+}
+
+@media (max-width: 560px) {
+  .title {
+    width: 24rem;
+  }
+  #projects h2 {
+    font-size: 1.6rem;
+  }
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-tile {
+  border: 1px solid #B1B1B1;
+  margin-right: 3vw;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 350px;
+  box-shadow: 0 4px 7px rgba( 62, 62, 62, 0.15);
+  border-radius: 10px;
+}
+
+.project-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-block {
+    position: relative;
+}
+
+.projects-grid p {
+  border: 1px solid rgba(181, 140, 72, 0.4);
+  font-size: 1.2rem;
+  padding: 15px;
+  background: #eedec3;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 81.5%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills {
+    display: block;
+    font-size: 0.9rem;
+    padding-top: 10px;
+}
+
+.repo {
+    display: block;
+    font-size: 0.9rem;
+    padding-top: 10px;
+}
+
+.fab {
+    padding: 0 5px;
+    font-size: 1.1rem;
+}
+
+/** Section 3 **/
+
+#contact {
+  width: 100%;
+  height: 90vh;
+  background-image: radial-gradient(circle, #fff2dc, #eedec3, #decbab, #cdb893, #bda57c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#contact > h2 {
+  font-size: 4rem;
+  margin-bottom: 18px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+/** Footer **/
+
+footer {
+  height: 35px;
+  border-top: 3px solid #BD857C;
+  background: radial-gradient(circle, #fff2dc, #eedec3, #decbab, #cdb893, #bda57c);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer > p {
+  font-weight: 300;
+  margin: auto 100px;
+}
+
+@media (max-width: 640px) {
+  footer > p {
+    font-size: 0.95rem;
+    margin: auto auto;
+}
+}
