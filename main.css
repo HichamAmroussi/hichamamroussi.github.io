@@ -330,16 +330,26 @@ footer {
   border-top: 3px solid #BD857C;
   background: radial-gradient(circle, #fff2dc, #eedec3, #decbab, #cdb893, #bda57c);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+}
+
+footer > h1 {
+  margin-left: 50px; 
+  font-size: 1rem;
 }
 
 footer > p {
   font-weight: 300;
-  margin: auto 100px;
+  margin-right: 100px;
 }
 
 @media (max-width: 640px) {
+  footer > h1 {
+    margin-left: 10px; 
+    font-size: 0.8rem;
+  }
+
   footer > p {
     font-size: 0.95rem;
     margin: auto auto;
