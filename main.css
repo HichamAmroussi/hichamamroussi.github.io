@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
+/** Muli Font **/
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 
 * {
   margin: 0;
@@ -195,28 +198,30 @@ a {
   width: 100%;
   text-align: center;
   padding-top: 150px;
-  padding-bottom: 200px;
+  padding-bottom: 190px;
 }
 
 .title {
-  width: 38rem;
+  width: 39rem;
   margin: auto; 
 }
 
 #projects h2 {
+  font-size: 2.4rem;
   color: #0e0d0d;
-  margin-bottom: 120px;
+  margin-bottom: 90px;
   background: rgba(238, 222, 195, 0.8);
   padding: 15px 0;
-  border-radius: 5px 0;
+  border-radius: 2px 2px 19px 19px;
+  border-top: 8px solid #BD857C;
 }
 
 @media (max-width: 560px) {
   .title {
-    width: 24rem;
+    width: 26rem;
   }
   #projects h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -294,13 +299,13 @@ a {
 /** Section 3 **/
 
 #contact {
-  width: 100%;
-  height: 90vh;
   background-image: radial-gradient(circle, #fff2dc, #eedec3, #decbab, #cdb893, #bda57c);
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
 }
 
 #contact > h2 {
@@ -320,7 +325,51 @@ a {
 }
 
 .icon {
+  font-size: 2.5rem;
   margin-right: 10px;
+}
+
+.fa-facebook-square {
+  color: #4267B2;
+}
+
+#insta {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;  
+}
+
+#contact .counter {
+  font-family: 'Muli', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-left: 10vw;
+  margin-bottom: 5vh;
+  height: 32vh;
+  width: 88vw;
+}
+
+@media (max-width: 640px) {
+  #contact .counter {
+    justify-content: center;
+    height: 22vh;
+    margin-left: 0;
+  }
+}
+
+#contact .counter #count {
+  margin: 0 10px 3px 10px;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+#contact .counter p {
+  display: flex;
+  align-items: center;
+  height: 50px;
 }
 
 /** Footer **/
@@ -330,13 +379,8 @@ footer {
   border-top: 3px solid #BD857C;
   background: radial-gradient(circle, #fff2dc, #eedec3, #decbab, #cdb893, #bda57c);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-}
-
-footer > h1 {
-  margin-left: 50px; 
-  font-size: 1rem;
 }
 
 footer > p {
@@ -345,13 +389,8 @@ footer > p {
 }
 
 @media (max-width: 640px) {
-  footer > h1 {
-    margin-left: 10px; 
-    font-size: 0.8rem;
-  }
-
   footer > p {
     font-size: 0.95rem;
     margin: auto auto;
-}
+  }
 }
