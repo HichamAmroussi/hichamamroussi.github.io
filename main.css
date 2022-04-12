@@ -74,6 +74,7 @@ a {
   height: 60px;
   background: #BD857C;
   box-shadow: 0 4px 7px rgba( 62, 62, 62, 0.2);
+  z-index: 999;
 }
 
 #navbar ul {
@@ -136,12 +137,12 @@ a {
 
 @media (max-width: 614px) {
   #welcome-section h1 {
-  height: auto;
-  margin-right: 0;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
+    height: auto;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 #welcome-section p {
@@ -178,16 +179,16 @@ a {
 
 @media (max-width: 614px) {
   #welcome-section p {
-  font-size: 2.1rem;
-  margin-top: 20px;
-  margin-right: 0;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+    font-size: 2.1rem;
+    margin-top: 20px;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
   #code {
-  font-size: 2.3rem;
-  margin-left: 15px;
+    font-size: 2.3rem;
+    margin-left: 15px;
   }
 }
 
@@ -227,45 +228,70 @@ a {
 
 .projects-grid {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto 100px auto;
 }
+
+@media only screen and (max-width: 1024px) {
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .projects-grid {
+    width: 95%;
+  }
+}
+
 
 .project-block {
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
+  flex: 1 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 7px rgba( 62, 62, 62, 0.15);
+  margin: 0 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .project-block {
+    margin-bottom: 3rem;
+  }
 }
 
 .project-tile {
-  border: 1px solid #B1B1B1;
-  border-bottom: none;
-  margin-right: 4vw;
-  display: flex;
-  flex-direction: column;
-  height: 350px;
-  width: 350px;
-  box-shadow: 0 4px 7px rgba( 62, 62, 62, 0.15);
-  border-radius: 10px 10px 0 0;
+  width: 100%;
+  position: relative;
+  padding-top: 90%;
+  overflow: hidden;
 }
 
 .project-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+
+.project-image:hover {
+  transform: scale(1.05);
 }
 
 .projects-grid .project-block .details {
-  border: 1px solid rgba(181, 140, 72, 0.4);
-  box-shadow: 0 4px 7px rgba( 62, 62, 62, 0.15);
-  border-radius: 0 0 10px 10px;
   font-size: 1.2rem;
   padding: 10px 0;
   background: #eedec3;
-  top: 80%;
-  left: 0;
-  width: 350px;
+  width: 100%;
 }
 
 
