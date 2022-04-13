@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="main.css">
     <title>My Portfolio</title>
 </head>
 <body>
-    <script src="https://kit.fontawesome.com/a267400530.js" crossorigin="anonymous"></script>
-
     <!-- START NAVIGATION BAR -->
 
     <nav id="navbar">
@@ -37,16 +39,22 @@
         <h2 class="title">These are some of my projects</h2>
         <div class="projects-grid">
             <div class="project-block">
-                <a 
-                  href="https://my-calculator11.netlify.app/" 
-                  target=”_blank”
-                  class="project-tile"
-                >
-                <img
-                    class="project-image"
-                    src="Calculator.PNG"
-                    alt="project"
-                /></a>
+                <figure class="project-tile">
+                    <img
+                      class="project-image"
+                      src="Calculator.PNG"
+                      alt="project1"
+                    />
+                    <a 
+                      href="https://my-calculator11.netlify.app/" 
+                      target=”_blank”
+                      class="show-website"
+                    >
+                        <span>Visit Website</span> 
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </figure>
+
                 <div class="details">
                     Calculator App
                     <span class="flex">
@@ -60,16 +68,22 @@
             </div>
 
             <div class="project-block">
-                <a 
-                  href="https://dz-can2021.netlify.app/" 
-                  target=”_blank”
-                  class="project-tile"
-                >
-                <img
-                    class="project-image"
-                    src="https://i.ibb.co/zhxdcMw/DZ-Football-Quiz-Game-Cover.png"
-                    alt="project"
-                /></a>
+                <figure class="project-tile">
+                    <img
+                      class="project-image"
+                      src="https://i.ibb.co/zhxdcMw/DZ-Football-Quiz-Game-Cover.png"
+                      alt="project2"
+                    />
+                    <a 
+                      href="https://dz-can2021.netlify.app/" 
+                      target=”_blank”
+                      class="show-website"
+                    >
+                        <span>Visit Website</span> 
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </figure>
+
                 <div class="details">
                     Quiz Game
                     <span class="flex">
@@ -84,16 +98,22 @@
             </div>
 
             <div class="project-block">
-                <a 
-                  href="https://codepen.io/SilverNight11/full/NWjKmKK" 
-                  target=”_blank”
-                  class="project-tile"
-                >
-                <img
-                    class="project-image"
-                    src="https://i.ibb.co/y807FYZ/Tribute-Page-Cover.jpg"
-                    alt="project"
-                /></a>
+                <figure class="project-tile">
+                    <img
+                      class="project-image"
+                      src="https://i.ibb.co/y807FYZ/Tribute-Page-Cover.jpg"
+                      alt="project3"
+                    />
+                    <a 
+                      href="https://codepen.io/SilverNight11/full/NWjKmKK" 
+                      target=”_blank”
+                      class="show-website"
+                    >
+                        <span>Visit Website</span> 
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </figure>
+
                 <div class="details">
                     Tribute Page
                     <span class="flex">
@@ -117,7 +137,7 @@
               target='_blank' 
               id="profile-link"
               class="btn"
-            ><i class="icon fa fa-instagram" id="insta" aria-hidden="true"></i> Instagram
+            ><i class="icon fab fa-instagram" id="insta" aria-hidden="true"></i> Instagram
             </a>
             <a 
               href="https://www.facebook.com/Hicham.Amroussi1/" 
