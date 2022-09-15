@@ -215,8 +215,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 @media (max-width: 614px) {
   .welcome-section p {
+    color: #eedec3;
     font-size: 2.1rem;
-    margin-top: 20px;
+    font-weight: 500;
+    margin-top: 8px;
     margin-right: 0;
     display: flex;
     justify-content: center;
@@ -404,13 +406,20 @@ body::-webkit-scrollbar-thumb:hover {
 
 @media (max-width: 1400px) {
   .project-block {
-    margin: 0 3.3rem;
+    margin: 0 2rem;
   }
 }
 
 @media (max-width: 1024px) {
   .project-block {
     margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .project-block {
+    margin: 0 3.3rem;
+    margin-bottom: 4rem;
   }
 }
 
@@ -453,7 +462,7 @@ body::-webkit-scrollbar-thumb:hover {
 @media (max-width: 1400px) {
   .show-website {
     top: 40%;
-    right: 4.5vw;
+    right: 3.6vw;
   }
 }
 @media (max-width: 800px) {
@@ -530,7 +539,18 @@ body::-webkit-scrollbar-thumb:hover {
   white-space: nowrap
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1400px) {
+  .skills {
+    font-size: 0.8rem;
+    margin-left: 8px;
+  }
+  .repo {
+    font-size: 0.85rem;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 800px) {
   .skills {
     font-size: 0.85rem;
     margin-left: 10px;
@@ -563,6 +583,13 @@ body::-webkit-scrollbar-thumb:hover {
   margin-bottom: 50px;
 }
 
+@media (max-width: 614px) {
+  .contact > h2 {
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+  }
+}
+
 .contact-links {
   display: flex;
   justify-content: center;
@@ -572,6 +599,15 @@ body::-webkit-scrollbar-thumb:hover {
 .btn {
   font-size: 1.7rem;
   padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 614px) {
+  .btn {
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
+  }
 }
 
 .icon {
@@ -640,7 +676,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 @media (max-width: 640px) {
   .footer > p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     margin: auto auto;
   }
 }
