@@ -341,17 +341,15 @@ body::-webkit-scrollbar-thumb:hover {
 
 .stack-list-icon {
   font-size: 5rem;
-  padding: 0.6rem 1.2rem;
+  padding: 1.2rem 1.2rem;
 }
 
 @media (max-width: 560px) {
   .stack-list-icon {
     font-size: 4.5rem;
-    padding: 0.8rem 2.3rem;
+    padding: 1.1rem 2.3rem;
   }
 }
-
-
 
 /** Section 3 **/
 .projects {
@@ -586,7 +584,7 @@ body::-webkit-scrollbar-thumb:hover {
 @media (max-width: 614px) {
   .contact > h2 {
     font-size: 2.3rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -594,6 +592,15 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+@media (max-width: 614px) {
+  .contact-links {
+    width: 287px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 .btn {
@@ -612,7 +619,13 @@ body::-webkit-scrollbar-thumb:hover {
 
 .icon {
   font-size: 2rem;
-  margin-right: 10px;
+  margin-right: 20px;
+}
+
+@media (max-width: 614px) {
+  .icon {
+    margin-right: 15px;
+  }
 }
 
 .fa-facebook-square {
@@ -624,38 +637,6 @@ body::-webkit-scrollbar-thumb:hover {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;  
-}
-
-.contact .counter {
-  font-family: 'Muli', sans-serif;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  margin-left: 10vw;
-  margin-bottom: 5vh;
-  height: 32vh;
-  width: 88vw;
-}
-
-@media (max-width: 640px) {
-  .contact .counter {
-    justify-content: center;
-    height: 22vh;
-    margin-left: 0;
-  }
-}
-
-.contact .counter .count {
-  margin: 0 10px 3px 10px;
-  font-weight: bold;
-  font-size: 1.8rem;
-}
-
-.contact .counter p {
-  display: flex;
-  align-items: center;
-  height: 50px;
 }
 
 /** Footer **/
