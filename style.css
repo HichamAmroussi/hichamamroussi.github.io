@@ -182,7 +182,6 @@ body::-webkit-scrollbar-thumb:hover {
   padding: 2px 10px;
   font-size: 1.3rem;
   color: white;
-  position: relative;
   transition: color 0.3s ease;
 }
 

@@ -4,7 +4,11 @@ const hamburgerBtn = document.querySelector('.hamburger-btn');
 
 // Event Listeners
 window.addEventListener('resize', () => {
-    showNavButton();
+    if(window.innerWidth <= 700) {
+        navbarListEl.classList.add('hamburger-menu');
+    } else {
+        navbarListEl.classList.remove('hamburger-menu');
+    }
 })
 
 hamburgerBtn.addEventListener('click', () => {
@@ -29,10 +33,3 @@ hamburgerBtn.addEventListener('click', () => {
 })
 
 // Functions
-function showNavButton() {
-    if(window.innerWidth <= 700) {
-        navbarListEl.classList.add('hamburger-menu');
-    } else {
-        navbarListEl.classList.remove('hamburger-menu');
-    }
-}
