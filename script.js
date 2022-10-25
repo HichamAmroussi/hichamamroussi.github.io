@@ -3,14 +3,6 @@ const navbarListEl = document.querySelector('.navbar-list');
 const hamburgerBtn = document.querySelector('.hamburger-btn');
 
 // Event Listeners
-window.addEventListener('resize', () => {
-    if(window.innerWidth <= 700) {
-        navbarListEl.classList.add('hamburger-menu');
-    } else {
-        navbarListEl.classList.remove('hamburger-menu');
-    }
-})
-
 hamburgerBtn.addEventListener('click', () => {
     const icone = hamburgerBtn.querySelector('i');
 
