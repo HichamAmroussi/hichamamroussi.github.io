@@ -19,7 +19,7 @@
     <!-- START NAVIGATION BAR -->
 
     <nav class="navbar">
-        <img src="/Images/My-Logo.png" alt="Website Logo" class="nav-logo" />
+        <img src="./Images/My-Logo.png" alt="Website Logo" class="nav-logo" />
         
         <button class="hamburger-btn"><i class="fa-solid fa-bars"></i></button>
         <ul class="navbar-list">
@@ -35,8 +35,23 @@
     <!-- START SECTION 1 -->
 
     <section id="welcome-section" class="welcome-section">
-        <h1>I am Hicham</h1>
-        <p>Full Stack Developer</p>
+        <div class="form">
+            <div class="forms form1"></div>
+            <div class="forms form2"></div>
+            <div class="forms form3"></div>
+            <div class="forms form4"></div>
+            <div class="forms form5"></div>
+            <div class="forms form6"></div>
+            <div class="forms form7"></div>
+            <div class="forms form8"></div>
+            <div class="square"></div>
+        </div>
+        <main>
+            <h1>Hicham Amroussi</h1>
+            <p>Full Stack Web Developer</p>
+        </main>
+
+        <p>Turning Beautiful Designs into Fruitful Experiences.</p>
     </section>
 
     <!-- END SECTION 1 -->
@@ -98,10 +113,12 @@
                 </figure>
 
                 <div class="details">
-                    E-commerce Website
-                    <span class="flex">
-                        <span class="skills">ExpressJs, EJS, CSS, MongoDB</span>
-                    </span>
+                    <p>E-commerce Website</p>
+                    <div class="flex">
+                        <div class="skills">
+                            <span>Express</span><span>EJS</span><span>CSS</span><span>MongoDB</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -123,15 +140,18 @@
                 </figure>
 
                 <div class="details">
-                    Recipe App
-                    <span class="flex">
-                        <span class="skills">ReactJs, CSS</span>
+                    <p>Recipe App</p>
+                    <div class="flex">
+                        <div class="skills">
+                            <span>React</span>
+                            <span>CSS</span>
+                        </div>
                         <a 
                           href="https://github.com/HichamAmroussi/React-Recipe-App"
                           target="_blank"
                         >
                         <span class="repo"><i class="github fab fa-github"></i>Repository</span></a>
-                    </span>
+                    </div>
                 </div>
             </div>
 
@@ -153,15 +173,19 @@
                 </figure>
 
                 <div class="details">
-                    Quiz Game
-                    <span class="flex">
-                        <span class="skills">HTML, CSS, JavaScript</span>
+                    <p>Quiz Game</p>
+                    <div class="flex">
+                        <div class="skills">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
                         <a 
                           href="https://github.com/HichamAmroussi/DZ-Football-Team-CAN2021-Quiz"
                           target="_blank"
                         >
                         <span class="repo"><i class="github fab fa-github"></i>Repository</span></a>
-                    </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,27 +197,16 @@
 
     <section id="contact" class="contact">
         <h2>Contact me</h2>
-        <div class="contact-links">
-            <a 
-              href="https://www.instagram.com/hichamamroussi/" 
-              target='_blank' 
-              id="profile-link"
-              class="btn"
-            ><i class="icon fab fa-instagram insta" aria-hidden="true"></i> Instagram
-            </a>
-            <a 
-              href="https://www.facebook.com/Hicham.Amroussi1/" 
-              target='_blank'
-              class="btn"
-            ><i class="icon fab fa-facebook-square"></i> Facebook
-            </a>
-            <a 
-              href="https://github.com/HichamAmroussi" 
-              target='_blank'
-              class="btn"
-            ><i class="icon fab fa-github"></i> GitHub
-            </a>
-        </div>
+        <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required></label>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required></label>
+            <label for="message">Message:</label>
+            <textarea spellcheck="false" id="message" name="message" placeholder="Hi!" required></textarea>
+
+            <button class="submit-btn">Submit</button>
+        </form>
     </section>
 
     <!-- END SECTION 4 -->
@@ -201,9 +214,40 @@
     <!-- START FOOTER SECTION -->
 
     <footer class="footer">
-        <p>&copy; Copyright 2022, All rights reserved.Hicham AMROUSSI</p>
+        <div class="contact-links">
+            <a 
+              href="https://www.instagram.com/hichamamroussi/" 
+              target='_blank' 
+              id="profile-link"
+              class="link-btn"
+            ><i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a 
+              href="https://www.facebook.com/Hicham.Amroussi1/" 
+              target='_blank'
+              class="link-btn"
+            ><i class="fab fa-facebook"></i>
+            </a>
+            <a 
+              href="https://github.com/HichamAmroussi" 
+              target='_blank'
+              class="link-btn"
+            ><i class="fab fa-github"></i>
+            </a>
+        </div>
+
+        <p>&copy; 2022 Hicham Amroussi. All rights reserved.</p>
     </footer>
 
     <!-- END FOOTER SECTION -->
+
+    <!-- POPUP -->
+    <div class="popup-container">
+        <div class="popup">
+            <i class="icon fa-solid fa-envelope-circle-check"></i>
+            <p class="popup-text">Message sent!</p>
+            <button class="popup-btn">Ok</button>
+        </div>
+    </div>
 </body>
 </html>
