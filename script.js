@@ -60,7 +60,7 @@ myForm.addEventListener('submit', async (e) => {
         searchParams.append(pair[0], pair[1]);
     }
 
-    fetch('http://localhost:3000/messages', {
+    fetch('https://wide-eyed-foal-dress.cyclic.app/messages', {
         method: 'POST',
         body: searchParams
     }).then((resp) => resp.json())
