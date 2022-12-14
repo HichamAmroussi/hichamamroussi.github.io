@@ -1,26 +1,32 @@
-// Selectors
+//------------- Selectors
+//Navbar
 const navbarListEl = document.querySelector('.navbar-list');
 const hamburgerBtn = document.querySelector('.hamburger-btn');
+//Form
+const myForm = document.getElementById('myForm');
+//Page
 const flowerPetals = document.querySelectorAll('.forms');
-// Popup
+//popup
 const popupContainer = document.querySelector('.popup-container');
 const popupText = document.querySelector('.popup-text');
 const popupBtn = document.querySelector('.popup-btn');
-// DOM Form elements
-const myForm = document.getElementById('myForm');
-const confirmBtn = document.querySelector('.submit-btn');
 
-// Functions
+//------------- Event Listeners
 
-// Event Listeners
-flowerPetals.forEach(((petal) => {
-    petal.addEventListener('click', () => {
-        petal.style.translate = "-20px";
-        petal.style.opacity = "0";
-    })
-}))
+myForm.addEventListener('submit', sendForm);
+hamburgerBtn.addEventListener('click', navigationDrawer);
+popupBtn.addEventListener('click', () => { popupContainer.style.display = "none" });
+flowerPetals.forEach((petal) => petal.addEventListener('click', () => pickPetal(petal)));
 
-hamburgerBtn.addEventListener('click', () => {
+
+//------------- Functions
+
+function pickPetal(petal) {
+    petal.style.translate = "-20px";
+    petal.style.opacity = "0";
+}
+
+function navigationDrawer() {
     const icone = hamburgerBtn.querySelector('i');
 
     if(icone.classList.contains('fa-bars')) {
@@ -39,9 +45,9 @@ hamburgerBtn.addEventListener('click', () => {
         // Slide in the menu
         navbarListEl.style.transform = "translateX(100vw)";
     }
-})
+}
 
-myForm.addEventListener('submit', async (e) => {
+function sendForm(e) {
     e.preventDefault();
 
     const confirmBtn = document.querySelector('.submit-btn');
@@ -66,14 +72,9 @@ myForm.addEventListener('submit', async (e) => {
     }).then((resp) => resp.json())
     .then((data) => {
         const loadingAnimation = document.querySelector('.circle');
+        
         // Show Popup
-        popupText.innerText = data.message;
-        popupContainer.style.display = "flex";
-
-        popupBtn.addEventListener('click', () => {
-            // Remove Popup
-            popupContainer.style.display = "none";
-        })
+        showPopup(data.message);
 
         // Remove Loader and Bring back button
         const confirmBtn = document.createElement('button');
@@ -82,4 +83,9 @@ myForm.addEventListener('submit', async (e) => {
         loadingAnimation.remove();
         myForm.appendChild(confirmBtn);
     });
-})
+}
+
+function showPopup(message) {
+    popupText.innerText = message;
+    popupContainer.style.display = "flex";
+}
