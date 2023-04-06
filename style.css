@@ -222,24 +222,24 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .welcome-section > p {
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   font-family: 'Permanent Marker', cursive;
+  text-align: center;
   position: absolute;
-  bottom: 32vh;
-  right: 22vw;
+  bottom: 33.5vh;
+  right: 0;
+  left: 0;
+  width: 100%;
 }
 @media (max-width: 1400px) {
   .welcome-section > p {
     font-size: 2rem;
-    right: 16vw;
     bottom: 27vh;
   }
 }
 @media (max-width: 500px) {
   .welcome-section > p {
-    text-align: center;
     font-size: 1.6rem;
-    right: 1vw;
     bottom: 32vh;
   }
 }
@@ -247,6 +247,7 @@ body::-webkit-scrollbar-thumb:hover {
 .welcome-section main {
   background-color: rgba(245, 245, 245, 0.2);
   padding: 1.6rem 3rem;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -289,6 +290,32 @@ body::-webkit-scrollbar-thumb:hover {
     text-align: center;
     font-size: 1.6rem;
     font-weight: 500;
+  }
+}
+
+.welcome-section .phrase {
+  font-size: 0.9rem;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: -200px;
+  transform: rotate(-25deg); 
+}
+.welcome-section .phrase span {
+  font-size: 1.4rem;
+}
+@media (max-width: 750px) {
+  .welcome-section .phrase {
+    top: -15px;
+    left: -150px;
+  }
+}
+@media (max-width: 500px) {
+  .welcome-section .phrase {
+    font-size: 0.8rem;
+    top: -120px;
+    right: -330px;
+    transform: rotate(-15deg); 
   }
 }
 
