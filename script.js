@@ -66,7 +66,7 @@ function sendForm(e) {
         searchParams.append(pair[0], pair[1]);
     }
 
-    fetch('https://hicham-portfolio-api.cyclic.app/inbox', {
+    fetch('https://ha-portfolio-api.cyclic.app/inbox', {
         method: 'POST',
         body: searchParams
     }).then((resp) => resp.json())
