@@ -313,9 +313,9 @@ body::-webkit-scrollbar-thumb:hover {
 @media (max-width: 500px) {
   .welcome-section .phrase {
     font-size: 0.8rem;
-    top: -120px;
-    right: -330px;
-    transform: rotate(-15deg); 
+    top: -100px;
+    left: 145px;
+    transform: rotate(-20deg); 
   }
 }
 
