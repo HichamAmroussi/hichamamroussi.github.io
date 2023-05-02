@@ -29,7 +29,7 @@ function pickPetal(petal) {
 function navigationDrawer() {
     const icone = hamburgerBtn.querySelector('i');
 
-    if(icone.classList.contains('fa-bars')) {
+    if (icone.classList.contains('fa-bars')) {
         // Change Icon
         icone.classList.remove('fa-bars');
         icone.classList.add('fa-xmark');
@@ -37,7 +37,7 @@ function navigationDrawer() {
         // Slide out the menu
         navbarListEl.style.transform = "translateX(0)";
 
-    } else if(icone.classList.contains('fa-xmark')) {
+    } else if (icone.classList.contains('fa-xmark')) {
         // Change Icon
         icone.classList.remove('fa-xmark');
         icone.classList.add('fa-bars');
@@ -62,7 +62,7 @@ function sendForm(e) {
     const formData = new FormData(myForm);
     const searchParams = new URLSearchParams();
 
-    for(const pair of formData) {
+    for (const pair of formData) {
         searchParams.append(pair[0], pair[1]);
     }
 
@@ -70,19 +70,19 @@ function sendForm(e) {
         method: 'POST',
         body: searchParams
     }).then((resp) => resp.json())
-    .then((data) => {
-        const loadingAnimation = document.querySelector('.circle');
-        
-        // Show Popup
-        showPopup(data.message);
+        .then((data) => {
+            const loadingAnimation = document.querySelector('.circle');
 
-        // Remove Loader and Bring back button
-        const confirmBtn = document.createElement('button');
-        confirmBtn.textContent = "Submit";
-        confirmBtn.classList.add('submit-btn');
-        loadingAnimation.remove();
-        myForm.appendChild(confirmBtn);
-    });
+            // Show Popup
+            showPopup(data.message);
+
+            // Remove Loader and Bring back button
+            const confirmBtn = document.createElement('button');
+            confirmBtn.textContent = "Submit";
+            confirmBtn.classList.add('submit-btn');
+            loadingAnimation.remove();
+            myForm.appendChild(confirmBtn);
+        });
 }
 
 function showPopup(message) {
