@@ -5,6 +5,8 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 /** Parmanent Marker Font **/
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins&display=swap');
+/** Cairo Font **/
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 
 
 * {
@@ -675,6 +677,60 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /** Section 4 **/
+.testimonials {
+  background-color: #f1f1f1;
+  min-height: 60vh;
+  width: 100%;
+}
+
+.testimonials .testimonials-container {
+  height: 60vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.testimonials .testimonials-container .testimonial-card {
+  text-align: center;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .testimonials .testimonials-container .testimonial-card {
+    height: 57%;
+  }
+}
+
+.testimonials .testimonials-container .random-profile {
+  background-color: #fff;
+  font-size: 3rem;
+  border-radius: 50px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials .testimonials-container .testimonial-card > p {
+  font-size: 1.5rem;
+  font-family: 'Cairo', sans-serif;
+  padding: 0 1rem;
+}
+
+.testimonials .testimonials-container .testimonial-card > div {
+  margin-top: 10px;
+}
+@media (max-width: 800px) {
+  .testimonials .testimonials-container .testimonial-card > div {
+    margin-top: 20px;
+  }
+}
+
+/** Section 5 **/
 .contact {
   background-image: radial-gradient(circle, #fff2dc, #eedec3, #decbab, #cdb893, #bda57c);
   padding: 8rem 0;
@@ -932,7 +988,7 @@ body::-webkit-scrollbar-thumb:hover {
   border: 5px solid #96D2E2;
   border-top-color: transparent;
   border-right-color: transparent;
-  animation: spin 0.5s infinite linear;
+  animation: spin 0.7s infinite ease;
 }
 
 /* Animations */
