@@ -18,7 +18,7 @@ showTestimonials();
 
 //------------- Event Listeners
 
-//document.addEventListener('DOMContentLoaded', incrementPageView);
+document.addEventListener('DOMContentLoaded', incrementPageView);
 // Forms
 myForm.addEventListener('submit', sendForm);
 // DOM Interactions
