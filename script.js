@@ -13,6 +13,7 @@ const popupBtn = document.querySelector('.popup-btn');
 
 //------------- Event Listeners
 
+document.addEventListener('DOMContentLoaded', incrementPageView);
 myForm.addEventListener('submit', sendForm);
 hamburgerBtn.addEventListener('click', navigationDrawer);
 popupBtn.addEventListener('click', () => { popupContainer.style.display = "none" });
@@ -88,4 +89,8 @@ function sendForm(e) {
 function showPopup(message) {
     popupText.innerText = message;
     popupContainer.style.display = "flex";
+}
+
+async function incrementPageView() {
+    await fetch("https://ha-portfolio-api.cyclic.app/portfolio/data/pageview", { method: 'PUT' });
 }
