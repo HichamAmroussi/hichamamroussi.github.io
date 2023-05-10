@@ -212,16 +212,32 @@
 
     <section id="contact" class="contact">
         <h2>Contact me</h2>
-        <form id="myForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required></label>
-            <label for="email">E-mail or WhatsApp Number:</label>
-            <input type="text" id="email" name="email" placeholder="Your Contact" required></label>
-            <label for="message">Message:</label>
-            <textarea spellcheck="false" id="message" name="message" placeholder="Hi!" required></textarea>
+        <div class="contact-wrapper">
+            <div class="contact-social-links">
+                <h3>Talk to me</h3>
+                <div class="social-link-box">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <h5>WhatsApp</h5>
+                    <p>+213 798795598</p>
+                    <a href="https://wa.me/+213798795598" target="_blank">Write Me <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        
 
-            <button class="submit-btn">Submit</button>
-        </form>
+            <div class="contact-form">
+                <h3>Tell me about your project</h3>
+                <form id="myForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required></label>
+                    <label for="email">E-mail or WhatsApp Number:</label>
+                    <input type="text" id="email" name="email" placeholder="Your Contact" required></label>
+                    <label for="message">Message:</label>
+                    <textarea spellcheck="false" id="message" name="message" placeholder="Hi!" required></textarea>
+        
+                    <button class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <!-- END SECTION 5 -->

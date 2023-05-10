@@ -690,6 +690,12 @@ body::-webkit-scrollbar-thumb:hover {
   align-items: flex-start;
   justify-content: center;
 }
+@media (max-width: 800px) {
+  .testimonials .testimonials-container {
+    padding-bottom: 1rem;
+    height: 52vh;
+  }
+}
 
 .testimonials .testimonials-container .testimonial-card {
   text-align: center;
@@ -767,7 +773,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .contact > h2 {
   font-size: 2.5rem;
-  padding: 3rem 0;
+  margin-bottom: 1.5rem;
 }
 @media (max-width: 1400px) {
   .contact > h2 {
@@ -775,38 +781,90 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 0.8rem 0;
   }
 }
-@media (max-width: 614px) {
+@media (max-width: 800px) {
   .contact > h2 {
     font-size: 2rem;
-    padding: 2rem 0;
+    margin-bottom: 1rem;
   }
 }
 
-.contact form {
+.contact-wrapper {
   margin: auto;
-  max-width: 940px;
-  width: 60%;
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 614px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.contact-wrapper .contact-form {
+  width: 100%;
+}
+.contact-wrapper .contact-form h3 {
+  text-align: center;
+  margin: 20px 0;
+}
+@media (max-width: 614px) {
+  .contact-wrapper .contact-form h3 {
+    margin: 15px 0;
+  }
+}
+
+.contact-wrapper .contact-social-links {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-@media (max-width: 500px) {
-  .contact form {
-    width: 86%;
+.contact-wrapper .contact-social-links h3 {
+  text-align: center;
+  margin: 20px 0;
+}
+@media (max-width: 614px) {
+  .contact-wrapper .contact-social-links h3 {
+    margin: 15px 0;
   }
+}
+
+.contact-wrapper .contact-social-links .social-link-box {
+  background-color: rgb(252, 252, 252);
+  border-radius: 20px;
+  box-shadow: rgba(60, 64, 67, 0.199) 0px 1px 2px 0px, rgba(60, 64, 67, 0.096) 0px 1px 3px 1px;
+  padding: 0.45rem 0;
+  margin-top: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .contact-wrapper .contact-social-links .social-link-box {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+}
+.contact-wrapper .contact-social-links .social-link-box .fa-whatsapp {
+  color: #44E161;
+  margin: 5px 0;
+  font-size: 2.6rem;
+}
+.contact-wrapper .contact-social-links .social-link-box a {
+  color: #0082F5;
+  margin: 5px 0 6px 0;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact form label,
 .contact form input,
 .contact form textarea {
   padding: 7px 0;
-  width: 100%;
-}
-@media (max-width: 500px) {
-  .contact form label,
-  .contact form input,
-  .contact form textarea {
-    width: 88%;
-  }
 }
 
 .contact form input,
