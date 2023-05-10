@@ -747,7 +747,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
   .testimonials .testimonials-container .testimonial-card > p {
     font-size: 1.4rem;
-    margin-top: 1rem;
+    margin-top: 0.8rem;
   }
   .testimonials .testimonials-container .testimonial-card > div {
     margin-top: 1.5rem;
