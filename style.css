@@ -711,7 +711,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 @media (max-width: 800px) {
   .testimonials .testimonials-container .testimonial-card {
-    height: 60%;
+    height: 65%;
     width: 86%;
     padding: 1.7rem 1rem;
   }
@@ -747,9 +747,10 @@ body::-webkit-scrollbar-thumb:hover {
   }
   .testimonials .testimonials-container .testimonial-card > p {
     font-size: 1.4rem;
+    margin-top: 1.1rem;
   }
   .testimonials .testimonials-container .testimonial-card > div {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -758,7 +759,7 @@ body::-webkit-scrollbar-thumb:hover {
   background-image: radial-gradient(circle, #fff2dc, #eedec3, #decbab, #cdb893, #bda57c);
   padding: 8rem 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 @media (max-width: 1400px) {
   .contact {
