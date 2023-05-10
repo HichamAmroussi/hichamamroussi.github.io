@@ -121,7 +121,7 @@ async function showTestimonials() {
         testimonialCard.classList.add('testimonial-card');
 
         testimonialCard.innerHTML = `
-            <div class="random-profile"><i class="fa-solid fa-user"></i></div>
+            <figure class="random-profile"><i class="fa-solid fa-user"></i></figure>
             <p>“${testimonial.body}”</p>
             <div>
                 <h4>${testimonial.name}</h4>
