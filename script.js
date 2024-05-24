@@ -30,11 +30,11 @@ flowerPetals.forEach((petal) => petal.addEventListener('click', () => pickPetal(
 //------------- Functions
 //API
 async function incrementPageView() {
-    await fetch("https://ha-portfolio-api.cyclic.app/portfolio/data/pageview", { method: 'PUT' });
+    await fetch("https://my-portfolio-api-hxj1.onrender.com/portfolio/data/pageview", { method: 'PUT' });
 }
 
 async function getTestimonials() {
-    const api = await fetch("https://ha-portfolio-api.cyclic.app/testimonial");
+    const api = await fetch("https://my-portfolio-api-hxj1.onrender.com/testimonial");
     const data = await api.json();
 
     return data.testimonials;
@@ -86,7 +86,7 @@ function sendForm(e) {
         searchParams.append(pair[0], pair[1]);
     }
 
-    fetch('https://ha-portfolio-api.cyclic.app/inbox', {
+    fetch('https://my-portfolio-api-hxj1.onrender.com/inbox', {
         method: 'POST',
         body: searchParams
     }).then((resp) => resp.json())
