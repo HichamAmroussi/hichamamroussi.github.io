@@ -4,8 +4,6 @@ const navbarListEl = document.querySelector('.navbar-list');
 const hamburgerBtn = document.querySelector('.hamburger-btn');
 // Section 1
 const flowerPetals = document.querySelectorAll('.forms');
-// Section 4
-const testimonialsContainer = document.querySelector('.testimonials-container');
 // Section 5
 const myForm = document.getElementById('myForm');
 //popup
@@ -14,7 +12,7 @@ const popupText = document.querySelector('.popup-text');
 const popupBtn = document.querySelector('.popup-btn');
 
 //------------- Function Calls
-showTestimonials();
+
 
 //------------- Event Listeners
 
@@ -31,13 +29,6 @@ flowerPetals.forEach((petal) => petal.addEventListener('click', () => pickPetal(
 //API
 async function incrementPageView() {
     await fetch("https://my-portfolio-api-hxj1.onrender.com/portfolio/data/pageview", { method: 'PUT' });
-}
-
-async function getTestimonials() {
-    const api = await fetch("https://my-portfolio-api-hxj1.onrender.com/testimonial");
-    const data = await api.json();
-
-    return data.testimonials;
 }
 
 //Other
@@ -108,27 +99,4 @@ function sendForm(e) {
 function showPopup(message) {
     popupText.innerText = message;
     popupContainer.style.display = "flex";
-}
-
-async function showTestimonials() {
-    const testimonialsData = await getTestimonials();
-
-    // Remove Loading Animation
-    testimonialsContainer.querySelector('.circle').remove();
-
-    testimonialsData.forEach((testimonial) => {
-        const testimonialCard = document.createElement('div');
-        testimonialCard.classList.add('testimonial-card');
-
-        testimonialCard.innerHTML = `
-            <figure class="random-profile"><i class="fa-solid fa-user"></i></figure>
-            <p>“${testimonial.body}”</p>
-            <div>
-                <h4>${testimonial.name}</h4>
-                <p>${testimonial.business}</p>
-            </div>
-        `
-
-        testimonialsContainer.appendChild(testimonialCard);
-    })
 }
